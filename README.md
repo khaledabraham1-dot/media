@@ -1,4 +1,4 @@
-# Ligne Rouge — Média numérique premium
+# La Ligne Rouge — Média numérique premium
 
 Plateforme d'information indépendante construite avec Next.js 15, TypeScript, TailwindCSS et Prisma.
 
@@ -40,8 +40,7 @@ Ouvrir [http://localhost:3000](http://localhost:3000).
 ├── components/          # Composants réutilisables
 ├── lib/                 # Utilitaires et configuration
 ├── prisma/              # Schéma et seed de la base de données
-├── public/              # Assets statiques
-└── old/                 # Ancien site HTML (référence)
+└── public/              # Assets statiques
 ```
 
 ## Commandes
@@ -75,4 +74,4 @@ Ouvrir [http://localhost:3000](http://localhost:3000).
 
 ## Licence
 
-© 2024 Ligne Rouge Media. Tous droits réservés.
+© 2024 La Ligne Rouge Media. Tous droits réservés.

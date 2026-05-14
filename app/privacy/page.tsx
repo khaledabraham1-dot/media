@@ -16,7 +16,7 @@ export default function PrivacyPage() {
 
           <h2 className="font-heading text-xl font-bold text-navy !mt-8">Collecte des données</h2>
           <p>
-            Ligne Rouge collecte uniquement les données nécessaires au fonctionnement
+            La Ligne Rouge collecte uniquement les données nécessaires au fonctionnement
             du service : adresse email (newsletter), données de navigation anonymisées
             (analytics), et commentaires.
           </p>

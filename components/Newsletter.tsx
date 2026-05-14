@@ -39,7 +39,7 @@ export function Newsletter() {
         </h2>
         <p className="text-base text-white/70 mb-8">
           Recevez chaque matin les articles les plus importants sélectionnés par
-          la rédaction de Ligne Rouge.
+          la rédaction de La Ligne Rouge.
         </p>
 
         {status === "success" ? (

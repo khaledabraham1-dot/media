@@ -33,7 +33,7 @@ export default function AdminLayout({
             Retour au site
           </Link>
           <div className="font-heading text-xl font-bold">
-            Ligne<span className="text-red">.</span>Rouge
+            La Ligne<span className="text-red">.</span>Rouge
           </div>
           <div className="text-[0.7rem] text-white/40 tracking-wider uppercase mt-1">
             Administration
@@ -56,7 +56,7 @@ export default function AdminLayout({
         </nav>
         <div className="p-4 border-t border-white/10">
           <div className="text-[0.7rem] text-white/30">
-            Ligne Rouge CMS v1.0
+            La Ligne Rouge CMS v1.0
           </div>
         </div>
       </aside>

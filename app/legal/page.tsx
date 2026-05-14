@@ -14,12 +14,12 @@ export default function LegalPage() {
         <div className="font-serif text-[1.1rem] leading-relaxed text-text space-y-6">
           <h2 className="font-heading text-xl font-bold text-navy !mt-8">Éditeur</h2>
           <p>
-            Le site Ligne Rouge est édité par Ligne Rouge Media.<br />
+            Le site La Ligne Rouge est édité par La Ligne Rouge Media.<br />
             Siège social : Dakar, Sénégal<br />
             Email : contact@lignerouge.media
           </p>
           <h2 className="font-heading text-xl font-bold text-navy !mt-8">Directeur de la publication</h2>
-          <p>Ligne Rouge Media</p>
+          <p>La Ligne Rouge Media</p>
           <h2 className="font-heading text-xl font-bold text-navy !mt-8">Hébergement</h2>
           <p>
             Ce site est hébergé par Vercel Inc.<br />

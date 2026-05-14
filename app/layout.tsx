@@ -27,16 +27,16 @@ export const metadata: Metadata = {
     process.env.NEXT_PUBLIC_SITE_URL || "https://lignerouge.media"
   ),
   title: {
-    default: "Ligne Rouge | Média numérique premium",
-    template: "%s | Ligne Rouge",
+    default: "La Ligne Rouge | Média numérique premium",
+    template: "%s | La Ligne Rouge",
   },
   description:
     "Plateforme d'information indépendante. Actualité, Politique, Sport, Société, International, Culture.",
   openGraph: {
     type: "website",
     locale: "fr_FR",
-    siteName: "Ligne Rouge",
-    title: "Ligne Rouge | Média numérique premium",
+    siteName: "La Ligne Rouge",
+    title: "La Ligne Rouge | Média numérique premium",
     description:
       "Plateforme d'information indépendante. Actualité, Politique, Sport, Société, International, Culture.",
     images: [
@@ -88,7 +88,7 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "NewsMediaOrganization",
-              name: "Ligne Rouge",
+              name: "La Ligne Rouge",
               url: "https://lignerouge.media",
               logo: "https://lignerouge.media/logo.svg",
               description: "Plateforme d'information indépendante.",
