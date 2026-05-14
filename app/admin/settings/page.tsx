@@ -22,7 +22,7 @@ export default async function AdminSettingsPage() {
               <label className="block text-sm font-medium text-gray-700 mb-1">Nom du site</label>
               <input
                 type="text"
-                defaultValue={settings?.siteName || "Ligne Rouge"}
+                defaultValue={settings?.siteName || "La Ligne Rouge"}
                 className="w-full border border-gray-200 rounded-lg px-4 py-2.5 text-sm focus:border-navy focus:ring-1 focus:ring-navy outline-none transition-colors"
                 readOnly
               />

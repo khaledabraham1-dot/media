@@ -27,7 +27,7 @@ export function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           <div>
             <div className="font-heading text-[1.6rem] font-extrabold text-navy mb-5">
-              Ligne<span className="text-red">.</span>Rouge
+              La Ligne<span className="text-red">.</span>Rouge
             </div>
             <p className="text-[0.9rem] text-text2 mb-6">
               Plateforme d&apos;information indépendante dédiée à l&apos;actualité
@@ -102,7 +102,7 @@ export function Footer() {
 
         <div className="pt-8 border-t border-border flex flex-col sm:flex-row justify-between items-center gap-4 text-[0.8rem] text-text3">
           <span>
-            &copy; {new Date().getFullYear()} Ligne Rouge. Tous droits réservés.
+            &copy; {new Date().getFullYear()} La Ligne Rouge. Tous droits réservés.
           </span>
           <span>Média indépendant depuis 2024</span>
         </div>

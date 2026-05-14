@@ -15,10 +15,10 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   return {
     title: `${category.name} — Actualités et analyses`,
-    description: category.description || `Toute l'actualité ${category.name} sur Ligne Rouge.`,
+    description: category.description || `Toute l'actualité ${category.name} sur La Ligne Rouge.`,
     openGraph: {
-      title: `${category.name} | Ligne Rouge`,
-      description: `Toute l'actualité ${category.name} sur Ligne Rouge.`,
+      title: `${category.name} | La Ligne Rouge`,
+      description: `Toute l'actualité ${category.name} sur La Ligne Rouge.`,
     },
     alternates: {
       canonical: `/category/${category.slug}`,

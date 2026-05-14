@@ -4,7 +4,7 @@ import { ContactForm } from "@/components/ContactForm";
 
 export const metadata: Metadata = {
   title: "Contact",
-  description: "Contactez la rédaction de Ligne Rouge.",
+  description: "Contactez la rédaction de La Ligne Rouge.",
 };
 
 export default function ContactPage() {

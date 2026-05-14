@@ -32,7 +32,7 @@ async function main() {
   await prisma.siteSettings.create({
     data: {
       id: "default",
-      siteName: "Ligne Rouge",
+      siteName: "La Ligne Rouge",
       tagline: "L'information qui compte",
       description:
         "Plateforme d'information indépendante. Actualité, Politique, Sport, Société, International, Culture.",
@@ -84,7 +84,7 @@ async function main() {
       email: "admin@lignerouge.media",
       name: "Admin",
       role: "admin",
-      bio: "Administrateur de la plateforme Ligne Rouge.",
+      bio: "Administrateur de la plateforme La Ligne Rouge.",
       avatar: IMGS[5],
     },
   });
@@ -92,9 +92,9 @@ async function main() {
   const editor = await prisma.user.create({
     data: {
       email: "redaction@lignerouge.media",
-      name: "Rédaction Ligne Rouge",
+      name: "Rédaction La Ligne Rouge",
       role: "editor",
-      bio: "Équipe éditoriale de Ligne Rouge. Journalisme indépendant et rigoureux.",
+      bio: "Équipe éditoriale de La Ligne Rouge. Journalisme indépendant et rigoureux.",
       avatar: IMGS[5],
     },
   });

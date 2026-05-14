@@ -15,19 +15,19 @@ export default function TermsPage() {
           <h2 className="font-heading text-xl font-bold text-navy !mt-8">Objet</h2>
           <p>
             Les présentes conditions générales d&apos;utilisation régissent l&apos;accès et
-            l&apos;utilisation du site Ligne Rouge. En accédant au site, vous acceptez
+            l&apos;utilisation du site La Ligne Rouge. En accédant au site, vous acceptez
             sans réserve les présentes conditions.
           </p>
 
           <h2 className="font-heading text-xl font-bold text-navy !mt-8">Accès au service</h2>
           <p>
-            L&apos;accès au site est gratuit. Ligne Rouge se réserve le droit de modifier
+            L&apos;accès au site est gratuit. La Ligne Rouge se réserve le droit de modifier
             ou d&apos;interrompre l&apos;accès au service à tout moment, sans préavis.
           </p>
 
           <h2 className="font-heading text-xl font-bold text-navy !mt-8">Contenu</h2>
           <p>
-            Les articles, analyses et contenus publiés sur Ligne Rouge sont protégés
+            Les articles, analyses et contenus publiés sur La Ligne Rouge sont protégés
             par le droit d&apos;auteur. Toute reproduction non autorisée est interdite.
             Les opinions exprimées dans les articles engagent leurs auteurs.
           </p>
@@ -41,8 +41,8 @@ export default function TermsPage() {
 
           <h2 className="font-heading text-xl font-bold text-navy !mt-8">Responsabilité</h2>
           <p>
-            Ligne Rouge s&apos;efforce de fournir des informations exactes et à jour.
-            Toutefois, la responsabilité de Ligne Rouge ne saurait être engagée en cas
+            La Ligne Rouge s&apos;efforce de fournir des informations exactes et à jour.
+            Toutefois, la responsabilité de La Ligne Rouge ne saurait être engagée en cas
             d&apos;erreur ou d&apos;omission dans les contenus publiés.
           </p>
         </div>

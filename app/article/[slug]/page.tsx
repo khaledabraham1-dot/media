@@ -84,7 +84,7 @@ export default async function ArticlePage({ params }: PageProps) {
     author: [{ "@type": "Person", name: article.author.name }],
     publisher: {
       "@type": "NewsMediaOrganization",
-      name: "Ligne Rouge",
+      name: "La Ligne Rouge",
       url: "https://lignerouge.media",
     },
     description: article.excerpt || article.subtitle,

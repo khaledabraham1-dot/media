@@ -123,7 +123,7 @@ model Bookmark {
 
 model SiteSettings {
   id          String @id @default("default")
-  siteName    String @default("Ligne Rouge")
+  siteName    String @default("La Ligne Rouge")
   tagline     String @default("L'information qui compte")
   description String @default("Plateforme d'information indépendante premium")
   locale      String @default("fr")

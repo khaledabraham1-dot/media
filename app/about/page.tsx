@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "À propos",
-  description: "Découvrez Ligne Rouge, plateforme d'information indépendante et premium.",
+  description: "Découvrez La Ligne Rouge, plateforme d'information indépendante et premium.",
 };
 
 export default function AboutPage() {
@@ -14,7 +14,7 @@ export default function AboutPage() {
         </h1>
         <div className="font-serif text-[1.15rem] leading-relaxed text-text space-y-6">
           <p>
-            <strong>Ligne Rouge</strong> est une plateforme d&apos;information indépendante dédiée
+            <strong>La Ligne Rouge</strong> est une plateforme d&apos;information indépendante dédiée
             à la couverture rigoureuse de l&apos;actualité internationale, politique, économique,
             technologique, sportive et culturelle.
           </p>

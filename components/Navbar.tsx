@@ -31,7 +31,7 @@ export function Navbar() {
             href="/"
             className="font-heading text-[1.45rem] font-bold text-navy tracking-tight shrink-0"
           >
-            Ligne<span className="text-red">.</span>Rouge
+            La Ligne<span className="text-red">.</span>Rouge
           </Link>
 
           <div className="w-px h-7 bg-border2 mx-5 shrink-0 hidden lg:block" />
