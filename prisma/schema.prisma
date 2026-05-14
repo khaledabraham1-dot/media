@@ -1,0 +1,163 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id            String    @id @default(cuid())
+  email         String    @unique
+  name          String
+  passwordHash  String?
+  avatar        String?
+  bio           String?
+  role          String    @default("reader") // reader, author, editor, admin
+  locale        String    @default("fr")
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+  articles      Article[]
+  comments      Comment[]
+  bookmarks     Bookmark[]
+
+  @@map("users")
+}
+
+model Category {
+  id          String    @id @default(cuid())
+  name        String
+  slug        String    @unique
+  description String?
+  color       String    @default("#C01D35")
+  order       Int       @default(0)
+  articles    Article[]
+  createdAt   DateTime  @default(now())
+
+  @@map("categories")
+}
+
+model Tag {
+  id       String       @id @default(cuid())
+  name     String
+  slug     String       @unique
+  articles ArticleTag[]
+
+  @@map("tags")
+}
+
+model Article {
+  id            String         @id @default(cuid())
+  title         String
+  slug          String         @unique
+  subtitle      String?
+  excerpt       String?
+  body          String
+  coverImage    String?
+  status        String         @default("draft") // draft, published, archived
+  featured      Boolean        @default(false)
+  breaking      Boolean        @default(false)
+  readTime      Int            @default(5)
+  views         Int            @default(0)
+  locale        String         @default("fr")
+  publishedAt   DateTime?
+  createdAt     DateTime       @default(now())
+  updatedAt     DateTime       @updatedAt
+  authorId      String
+  author        User           @relation(fields: [authorId], references: [id])
+  categoryId    String
+  category      Category       @relation(fields: [categoryId], references: [id])
+  tags          ArticleTag[]
+  comments      Comment[]
+  bookmarks     Bookmark[]
+  seoTitle      String?
+  seoDesc       String?
+  ogImage       String?
+
+  @@index([status, publishedAt])
+  @@index([categoryId])
+  @@index([authorId])
+  @@map("articles")
+}
+
+model ArticleTag {
+  articleId String
+  tagId     String
+  article   Article @relation(fields: [articleId], references: [id], onDelete: Cascade)
+  tag       Tag     @relation(fields: [tagId], references: [id], onDelete: Cascade)
+
+  @@id([articleId, tagId])
+  @@map("article_tags")
+}
+
+model Comment {
+  id        String    @id @default(cuid())
+  body      String
+  approved  Boolean   @default(false)
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+  authorId  String
+  author    User      @relation(fields: [authorId], references: [id])
+  articleId String
+  article   Article   @relation(fields: [articleId], references: [id], onDelete: Cascade)
+  parentId  String?
+  parent    Comment?  @relation("CommentReplies", fields: [parentId], references: [id])
+  replies   Comment[] @relation("CommentReplies")
+
+  @@index([articleId])
+  @@map("comments")
+}
+
+model Bookmark {
+  id        String   @id @default(cuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  articleId String
+  article   Article  @relation(fields: [articleId], references: [id], onDelete: Cascade)
+  createdAt DateTime @default(now())
+
+  @@unique([userId, articleId])
+  @@map("bookmarks")
+}
+
+model SiteSettings {
+  id          String @id @default("default")
+  siteName    String @default("Ligne Rouge")
+  tagline     String @default("L'information qui compte")
+  description String @default("Plateforme d'information indépendante premium")
+  locale      String @default("fr")
+  logo        String?
+  favicon     String?
+  socialX     String?
+  socialFb    String?
+  socialIg    String?
+  analyticsId String?
+
+  @@map("site_settings")
+}
+
+model NewsletterSub {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  locale    String   @default("fr")
+  active    Boolean  @default(true)
+  createdAt DateTime @default(now())
+
+  @@map("newsletter_subs")
+}
+
+model PageView {
+  id        String   @id @default(cuid())
+  path      String
+  articleId String?
+  userAgent String?
+  referer   String?
+  country   String?
+  createdAt DateTime @default(now())
+
+  @@index([path])
+  @@index([articleId])
+  @@index([createdAt])
+  @@map("page_views")
+}
